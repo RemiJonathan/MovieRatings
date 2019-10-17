@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<MovieRatings.Models.Business>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <!--DB.Rating.getRating(id).Movie.MovieId-->
+            @Html.ActionLink("Details", ""/*DB.Rating.getRating(id).Movie.MovieTitle*/, new { /* id=item.PrimaryKey */ }) |
+        </td>
+    </tr>
+}
+
+</table>
